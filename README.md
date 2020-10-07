@@ -1,7 +1,6 @@
 # 임베디드 애플리케이션 구현
 
 * 라즈베리파이 OLED연결
-<img src="c://a.png" width="40%" height="30%"></img>
 
 * 라즈베리파이 버튼LED
 
