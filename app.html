@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='thunder.ico') }}">
+    
+    <style>
+        .flex{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h3>라즈베리파이 GPIO의 LED ON/OFF</h3>
+    <div class="flex">
+        {% for pin in pins %}
+        <div>{{pins[pin]['name']}}</div>
+        {% if pins[pin]['state']==1%}
+            <button><a href="/{{pin}}/off">ON</a></button>
+        {% else %}
+            <button><a href="/{{pin}}/on">OFF</a></button>
+        {% endif %}
+        {% endfor %}    
+
+    </div>
+</body>
+</html>
